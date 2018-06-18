@@ -1,19 +1,19 @@
 <template>
   <div class="container">
     <div class="box1">
-      <h3>Random</h3>
+      <h3>Random</h3><p  id = "demo" ></p>
   </div>
   <div class="box2">
     <div id="but">
-      <h1 v-if="ok">Loading</h1>
+      <!-- <h1 v-if="ok">Loading</h1> -->
 
       <button @click="warn()">Random</button>
       <!-- <p>{{ posts }}</p> -->
-      <p  id = "demo" ></p>
-      <p>UserID{{ posts.userId }}</p>
 
-      <p>Title{{ posts.title }}</p>
-      <p>{{ posts.body }}</p>
+      <h4>UserID{{ posts.userId }}</h4>
+
+      <h4>Title{{ posts.title }}</h4>
+      <h4>{{ posts.body }}</h4>
 
       <!-- <p>{{ comments }}</p> -->
       <!-- <button @click="e('Form cannot be submitted yet.', $event)">e</button> -->
@@ -115,6 +115,9 @@ body{
   color: #6666ff;
   font-family:  cursive;
   justify-content: center;
+}
+.box2{
+  color: #ebebfa;
 }
 </style>
 <!-- #ffcc99 -->
