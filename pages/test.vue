@@ -18,7 +18,6 @@
           <p>{{ post.email }}</p>
         </li>
       </ul>
-
   </div>
 </div>
 </template>
@@ -26,7 +25,6 @@
 <script>
 import axios from 'axios';
 import pop from '~/components/pop.vue';
-// Import component
 
 export default {
   components:{
@@ -47,6 +45,7 @@ export default {
       if (event) event.preventDefault();
       axios.get('https://reqres.in/api/unknown/23')
         .then((response) => {
+          this.ok = false;
           this.posts = response.data;
           console.log(this.posts);
         })
@@ -60,7 +59,6 @@ export default {
     },
     warn(message, event) {
       this.ok = true;
-      // now we have access to the native event
       if (event) event.preventDefault();
       axios.get('https://jsonplaceholder.typicode.com/users')
         .then((response) => {
